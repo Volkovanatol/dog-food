@@ -4,7 +4,7 @@ import Search from "../Search/search";
 import "./header.css";
 import Ctx from "../../Ctx";
 
-export default ({ goods, searchGoods, setModalActive}) => {
+export default () => {
     const {user, setUser, setModalActive, PATH, favorites} = useContext(Ctx);
     // хук состояния [свойство, функция в качестве аргумента которой передается новое значение нашего свойства] = useState(аргумент - изначальное значение свойства)
     // const [user, setUser] = useState(localStorage.getItem("user8"));
@@ -12,15 +12,6 @@ export default ({ goods, searchGoods, setModalActive}) => {
     // let user = localStorage.getItem("user8");
     const logIn = (e) => {
         e.preventDefault();
-        // let name = prompt("Как вас зовут?");
-        // if (name) {
-        //     localStorage.setItem("user8", name);
-        //     setUser(name);
-        // }
-        // setModalActive(function(previous) {
-        //     console.log("Активность модального окна:", previous)
-        //     return !previous;
-        // });
         setModalActive(prev => !prev);
     }
     const logOut = (e) => {
@@ -30,11 +21,11 @@ export default ({ goods, searchGoods, setModalActive}) => {
     }
     return <header>
         <Link className="logo" to="/">DogFood</Link>
-        <Search data={goods} searchGoods={searchGoods}/>
+        <Search/>
         {/* <input type="search" placeholder="Поиск..." className="search"/> */}
         <nav className="menu">
             {/* true && true */}
-            {user && <Link to="/profile">{user}</Link>}
+            {user && user.name && <Link to="/profile">{user.name}</Link>}
             {!user && <a href="" onClick={logIn}>Войти</a>}
             {user && <a href="" onClick={logOut}>Выйти</a>}
         </nav>
