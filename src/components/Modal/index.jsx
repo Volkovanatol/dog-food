@@ -5,11 +5,10 @@ import Ctx from "../../Ctx";
 import Signup from "./Signup";
 import Login from "./Login";
 
-export default ({isActive, setState}) => {
+export default () => {
     const [auth, setAuth] = useState(true);
     const {modalActive, setModalActive} = useContext(Ctx);
-    // isActive => modalActive
-    // setState => setModalActive
+    
     let style = {
         display: modalActive && "flex",
         // display: isActive ? "flex": "none"
