@@ -1,0 +1,135 @@
+.block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 250px;
+}
+
+.one {
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.two {
+    margin-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 300px;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    background-color: #DB6825;
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.five-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    background-color: #DF9441;
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.three-block {
+    background-color: #9CCE55;
+}
+.two-block {
+    background-color: #25B5BE;
+}
+.one-block {
+    background-color: #D7A216;
+}
+
+.description h3 {
+    font-size: 1.5em;
+}
+
+.description p {
+    font-size: 1.2em;
+}
+
+.block-img {
+    max-width: 200px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FF9027;
+    border-radius: 20px;
+    padding: 20px;
+    color: #fff;
+    margin: 20px 0px 0px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.banner h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+.banner p {
+    font-size: 1.2em;
+}
+
+.banner img {
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card {
+    background-color: #F2F1FC;
+}
+
+.card > button {
+    font-size: 1.2em;
+}
+
+.btn-prof {
+    margin: 20px;
+}
+
+.name {
+    text-align: end;
+}
+
+.heading {
+    text-align: center;
+    margin-top: -70px;
+}
+
+.head-description {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.description-product {
+    text-align: center;
+    margin-left: 30px;
+}
+
+.buy {
+    margin-left: 30px;
+}
+
+.head {
+    text-align: center;
+}
+
+.breadcrumbs {
+    font-size: 15px;
+    color: grey;
+}

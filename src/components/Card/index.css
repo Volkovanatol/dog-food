@@ -16,3 +16,6 @@
     right: 1em;
     color: crimson;
 }
+.card>.btn {
+    width: max-content;
+}
