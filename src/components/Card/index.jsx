@@ -15,6 +15,7 @@ export default ({ name, pictures, price, likes, _id }) => {
         api.setLike(_id, like)
             .then(res => res.json())
             .then(data => {
+                console.log(data);
                 setFavorites(prev => {
                     let arr = prev.filter(el => el._id === _id);
                     return arr.length > 0 ?
