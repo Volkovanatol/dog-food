@@ -6,10 +6,13 @@ a {
     text-decoration: none;
     color: inherit;
 }
+a:hover {
+    color: silver;
+}
 .wrapper {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 100px auto 50px;
+    grid-template-rows: 300px auto 200px;
 }
 .wrapper>* {
     padding: 0 calc(50% - 600px);
@@ -18,6 +21,8 @@ a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2em;
+    align-items: stretch;
+    justify-content: space-between;
 }
 @media (max-width: 1260px) {
     .wrapper>* {
@@ -49,10 +54,48 @@ a {
     display: flex;
     padding: 6px 12px;
 }
-
+.catalog {
+    font-size: 18px;
+    padding: 20px 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    background-color: #23a030;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
+    padding: 15px;
+    transition: background-color 0.3s ease-in;
+}
 .form-preview {
     height: 106px;
     background-size: contain;
     background-position: top right;
     background-repeat: no-repeat;
+}
+.profile-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile-row svg {
+    cursor: pointer;
+    fill: silver; 
+}
+.profile-row svg:hover {
+    cursor: pointer;
+    fill: orange;
+}
+.profile-row:not(:nth-child(2)) {
+    color: grey;
+}
+.profile-row input {
+    max-width: 300px;
+}
+.btn.sort {
+    background-color: #222;
+    color: orange;
 }

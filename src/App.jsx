@@ -24,8 +24,6 @@ const PATH = "/";
 
 const dataHome = dataLocal;
 
-const smiles = [<span>^_^</span>, "=)", "O_o", ";(", "^_0", "@_@", "–_–"];
-
 const App = () => {
     let usr = localStorage.getItem("user8");
     if (usr) {

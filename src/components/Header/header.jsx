@@ -8,7 +8,7 @@ import Basket from "../../pages/Basket";
 
 import "./header.css";
 
-import logo from "../Logo/logo.svg";
+import logo from "../img/logo.svg";
 import Favorites from "../../pages/Favorites";
 
 export default () => {
