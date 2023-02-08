@@ -48,7 +48,7 @@ export default () => {
         </nav>
         </div>
         <div className="header-bottom">
-            <h1>Kакомства для собак</h1>
+            <h1>Лакомства для собак</h1>
             <h3>Всегда свежие лакомства ручной работы с доставкой на дом по России</h3>
         <Link className="btn btn-secondary btn-lg" to="/catalog">
             Каталог
