@@ -16,8 +16,6 @@ export default ({change, close,}) => {
         api.signIn(body)
             .then(res => res.json())
             .then(data => {
-                // Не забыть отловить сообщение с ошибкой
-                console.log(data);
                 localStorage.setItem("user8", JSON.stringify(data.data));
                 localStorage.setItem("token8", data.token);
                 setToken(data.token);
@@ -25,12 +23,20 @@ export default ({change, close,}) => {
                 setInp2("");
                 close(false)
             })
+            .catch(() => {
+                setInp1("");
+                setInp2("");
+                alert("Неверные логин или пароль");
+            })
     }
+
+    
 
     return <form onSubmit={sendForm}>
         <input 
             type="email" 
             placeholder="Введите вашу почту" 
+            autoComplete="username"
             value={inp1} 
             required
             onChange={(e) => {setInp1(e.target.value)}}
@@ -38,6 +44,7 @@ export default ({change, close,}) => {
         <input 
             type="password" 
             placeholder="Пароль" 
+            autoComplete="current-password"
             value={inp2} 
             onChange={(e) => {setInp2(e.target.value)}}
         />

@@ -13,10 +13,7 @@ import Favorites from "../../pages/Favorites";
 
 export default () => {
     const {user, setUser, setModalActive, PATH, favorites,  basket} = useContext(Ctx);
-    // хук состояния [свойство, функция в качестве аргумента которой передается новое значение нашего свойства] = useState(аргумент - изначальное значение свойства)
-    // const [user, setUser] = useState(localStorage.getItem("user8"));
-
-    // let user = localStorage.getItem("user8");
+   
     const logIn = (e) => {
         e.preventDefault();
         setModalActive(prev => !prev);

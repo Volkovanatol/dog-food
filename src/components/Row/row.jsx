@@ -1,10 +1,10 @@
-import React, {useContext, useState, useEffect} from "react";
-import {Image, Button, ButtonGroup} from "react-bootstrap";
+import React, { useContext, useState, useEffect } from "react";
+import { Image, Button, ButtonGroup } from "react-bootstrap";
 
 import Ctx from "../../Ctx";
 
-export default ({name, pictures, cnt, price, id}) => {
-    const {setBasket} = useContext(Ctx);
+export default ({ name, pictures, cnt, price, id, discount }) => {
+    const { setBasket } = useContext(Ctx);
     const [n, setN] = useState(cnt);
     const [flag, setFlag] = useState(false);
     const increment = () => {
@@ -31,8 +31,13 @@ export default ({name, pictures, cnt, price, id}) => {
             })
         }
     }, [n]);
+    const disc = Math.round(price - (price * discount) / 100);
+    const del = () => {
+        setFlag(false);
+        return flag;
+    }
     return <tr className="align-middle">
-        <td><Image src={pictures} alt={name} height="100"/></td>
+        <td><Image src={pictures} alt={name} height="100" /></td>
         <td>{name}</td>
         <td>
             <ButtonGroup>
@@ -42,5 +47,7 @@ export default ({name, pictures, cnt, price, id}) => {
             </ButtonGroup>
         </td>
         <td>{price * n}₽</td>
+        <td>{disc * n}₽</td>
+        <td>{discount}%</td>
     </tr>
 }

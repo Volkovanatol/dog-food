@@ -1,28 +1,12 @@
-import React, {useContext, useState} from "react";
-import { useEffect } from "react";
+import React, {useContext, useState, useEffect} from "react";
 import {Table} from "react-bootstrap";
 
 import Ctx from "../Ctx";
 import Row from "../components/Row/row";
 
-/*
-    +1) Создать массив корзины как Ctx
-    +2) сохранять корзину в localStorage
-    +3) Создать страницу Cart и подключить к ней роутер
-    +4) Создать ссылку на страницу с корзиной (header)
-    +5) Научиться добавлять товары в корзину
-    +6) Отобразить информацию о корзине
-    7) Изменять количество товаров в корзине и пересчитывать сумму
-    [{
-        id: "...",
-        cnt: "..."
-    }]
-*/
-
 export default () => {
     const [gds, setGds] = useState([]);
     const {basket, goods} = useContext(Ctx);
-
     useEffect(() => {
         let arr = [];
         if (goods.length) {
@@ -31,7 +15,7 @@ export default () => {
             })
         }
         setGds(arr);
-    }, [basket, goods])
+    }, [basket, goods]);
 
     return <>
         <h1>Корзина</h1>
@@ -42,6 +26,8 @@ export default () => {
                     <th>Название</th>
                     <th>Количество</th>
                     <th>Цена</th>
+                    <th>Новая цена</th>
+                    <th>Скидка</th>
                 </tr>
             </thead>
             <tbody>
@@ -49,10 +35,10 @@ export default () => {
             </tbody>
             <tfoot>
                 <tr>
-                    <td colSpan={3} className="text-end fw-bold fs-3">ИТОГО:</td>
+                    <td colSpan={5} className="text-end fw-bold fs-3">ИТОГО:</td>
                     <td className="fw-bold fs-3">
                         {basket.reduce((acc, el, i) => {
-                            acc += el.cnt * gds[i].price
+                            acc += (el.cnt * Math.round(gds[i].price - (gds[i].price * gds[i].discount) / 100));
                             return acc;
                         }, 0)}₽
                     </td>

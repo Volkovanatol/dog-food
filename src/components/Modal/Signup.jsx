@@ -36,6 +36,7 @@ export default ({change, close}) => {
                             localStorage.setItem("user", JSON.stringify(data.data));
                             localStorage.setItem("token", data.token);
                             setToken(data.token);
+                            setUser(data.data);
                             
                         })
                     setEmail("");

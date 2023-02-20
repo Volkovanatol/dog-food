@@ -13,6 +13,7 @@
     overflow: hidden;
     z-index: 1;
     justify-content: space-between;
+    margin-top: -3em;
 }
 .promo:before {
     content: "";
@@ -26,4 +27,9 @@
 }
 .promo img {
     width: 200px;
+}
+h2 {
+    font-size: 30px;
+    color: rgb(34, 34, 32);
+    ;
 }

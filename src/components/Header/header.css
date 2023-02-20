@@ -1,23 +1,69 @@
 header {
-    background-color: rgb(243, 231, 5);
+    background-color: rgb(5, 199, 243);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header-top {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    grid-template: 30px;
 }
+
 .logo {
     font-size: 1.5em;
 }
+
 .search {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #222;
     outline: none;
 }
+
 .search:focus {
     border-bottom-color: #fff;
 }
+
 .menu {
     display: flex;
     gap: 1em;
+}
+
+.header-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-bottom h1 {
+    width: 400px;
+}
+
+.header-bottom h3 {
+    width: 500px;
+}
+
+.btn {
+    height: 50px !important;
+}
+
+.badge-link {
+    position: relative;
+}
+
+.badge {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14px;
+    height: 14px;
+    font-size: 8px;
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
 }

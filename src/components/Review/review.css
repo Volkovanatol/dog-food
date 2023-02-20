@@ -1,0 +1,12 @@
+.rew {
+    margin: 10px 0;
+    padding: 0;
+    box-shadow: 0 0 5px #2226;
+    border-radius: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    display: grid;
+    justify-items: flex-start;
+    height: 100%;
+    text-align: center;
+}

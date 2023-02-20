@@ -1,13 +1,58 @@
 footer {
-    background-color: #222;
-    color: #fff;
+    background-color: rgb(5, 207, 243);
+    color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 }
-.footer__copy {
+
+.footer_logo {
+    margin: 20px;
+}
+
+.footer_logo img {
+    padding-bottom: 50px;
+}
+
+.footer_copy {
+    font-size: 1em;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacts p {
+    font-weight: 650;
+}
+
+.phone {
+    font-size: 1em;
+    font-weight: 650;
+}
+
+.email {
+    font-size: 1em;
+    font-weight: 650;
+}
+
+.social-media {
+    margin-top: 15px;
+}
+
+.social-media a {
     font-size: 1.5em;
+    margin-right: 15px;
 }
-.footer__text {
-    text-align: right;
+
+.footer_menu ul li {
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+li {
+    line-height: 2;
 }

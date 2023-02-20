@@ -11,7 +11,6 @@ export default () => {
     
     let style = {
         display: modalActive && "flex",
-        // display: isActive ? "flex": "none"
     }
     return <div className="modal-container" style={style}>
         <div className="modal">
